@@ -4,7 +4,7 @@ const cardsData = [
   {
     title: "Html5",
     description: "Aprenda os fundamentos do Html5.",
-    image: "/Html5.png",
+    image: "/html5.png",
     link: "/Html5"
   },
    {
