@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 type CardProps = {
   title: string;
   description: string;
@@ -5,10 +7,10 @@ type CardProps = {
 };
 
 
- export default function Card({ title, description, image, link }) {
+ export default function Card({ title, description, image, link }: CardProps & { link: string } ) {
   return (
     <div className="bg-pink-100 rounded-lg shadow-md overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <Image src={image} alt={title} width={400} height={192} className="w-full h-48 object-cover" />
       
       <div className="p-4 flex-grow">
         <h3 className="text-xl font-semibold text-pink-800">{title}</h3>
@@ -26,4 +28,4 @@ type CardProps = {
       </div>
     </div>
   );
-}
+} 

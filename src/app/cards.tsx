@@ -10,7 +10,7 @@ const cardsData = [
    {
     title: "CSS3",
     description: "Aprenda os fundamentos do CSS3.",
-    image: "css.png",
+    image: "/css.png",
     link: "/CSS3"
   },
    {
