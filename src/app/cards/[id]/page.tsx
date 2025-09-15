@@ -30,12 +30,7 @@ export default function CardPage({ params }: Props) {
         <h1 className="text-4xl font-bold text-pink-800 mt-4">{card.title}</h1>
         <p className="mt-4 text-pink-700 text-lg">{card.content}</p>
 
-        <a
-          href="/cards"
-          className="mt-6 inline-block bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition"
-        >
-          Voltar
-        </a>
+       
       </div>
     </div>
   );
