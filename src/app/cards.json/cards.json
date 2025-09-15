@@ -1,0 +1,23 @@
+[
+  {
+    "id": "react",
+    "title": "React",
+    "description": "Aprenda os fundamentos do React.",
+    "image": "/react.jpg",
+    "content": "React é uma biblioteca JavaScript para construir interfaces de usuário."
+  },
+  {
+    "id": "next",
+    "title": "Next.js",
+    "description": "Framework poderoso para aplicações web.",
+    "image": "/next.jpg",
+    "content": "Next.js permite renderização híbrida e rotas dinâmicas com facilidade."
+  },
+  {
+    "id": "tailwind",
+    "title": "Tailwind CSS",
+    "description": "Estilize com rapidez e eficiência.",
+    "image": "/tailwind.jpg",
+    "content": "Tailwind é um framework utilitário para estilização rápida e responsiva."
+  }
+]
