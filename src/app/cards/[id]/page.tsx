@@ -31,12 +31,21 @@ export default function CardPage({ params }: Props) {
   const Component = cardComponents[params.id];
 
   if (!Component) {
-    return <div className="p-8 text-red-600">Card não encontrado.</div>;
+    return <div className="p-8 text-pink-600">Card não encontrado.</div>;
   }
 
   return (
-    <div className="min-h-screen bg-white p-8">
-      <Component />
+    <div
+      className="relative bg-cover bg-center min-h-screen pt-20"
+      style={{ backgroundImage: "url('/foto.jpg')" }}
+    >
+      {/* Overlay semi-transparente */}
+      <div className="absolute inset-0 bg-white/60 z-0"></div>
+
+      {/* Conteúdo */}
+      <div className="relative z-10 p-8">
+        <Component />
+      </div>
     </div>
   );
 }
