@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Menu from "./components/menu";
@@ -5,6 +7,11 @@ import Cards from "./cards";
 import { Roboto, Indie_Flower } from "next/font/google";
 import About from "./components/about";
 
+
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -18,6 +25,9 @@ const indie = Indie_Flower({
 
 
 export default function Home() {
+   useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <main>
       {/* Seção do topo com imagem de fundo */}
@@ -34,7 +44,7 @@ export default function Home() {
       
 
           <h1 className="text-pink-800 text-6xl md:text-8xl font-bold mt-6">
-            Alessandra Santana
+            {/*Alessandra Santana*/}
           </h1>
 
           <p className="text-pink-950 mt-6 mb-6 bg-pink-300 text-xl md:text-2xl px-6 py-4 rounded-lg">
@@ -50,13 +60,12 @@ export default function Home() {
      {/* Seção de cards com fundo branco */}
 <section className={`py-2 px-6 bg-white ${roboto.className}`}>
 <p className="text-center text-pink-950 font-bold mt-6 mb-6 text-xl md:text-4xl px-6">
-  Do Zero ao Front-end: Minha Jornada com o Koru
+  Do Zero ao FullStack: Minha Jornada com o Koru
 </p>
 
-  <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-   
-    <Cards />
-  </div>
+ <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+  <Cards />
+</div>
  
 </section>
 

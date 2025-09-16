@@ -1,7 +1,8 @@
 "use client";
-import Link from "next/link";
+
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -9,7 +10,7 @@ const roboto = Roboto({
   weight: ["400", "700"],
 });
 
-export default function Front() {
+export default function css3() {
   return (
     <>
       {/* Menu fixo no topo */}
@@ -17,8 +18,7 @@ export default function Front() {
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold text-pink-700">Alessandra</h1>
           <nav className="space-x-6">
-           <Link href="/" className="text-pink-600 hover:text-pink-800 transition">Home</Link>
-           
+            <Link href="/" className="text-pink-600 hover:text-pink-800 transition">Home</Link>
             <Link href="/sobre" className="text-pink-600 hover:text-pink-800 transition">Sobre Mim</Link>
           </nav>
         </div>
@@ -36,41 +36,34 @@ export default function Front() {
         <section className="relative z-10 py-16 px-6">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Imagem decorativa */}
+              {/* Imagem CSS3 */}
               <div className="relative" data-aos="fade-up-right" data-aos-delay="300">
                 <div className="relative w-full h-[400px] rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src="/note.png" 
-                    alt="Imagem decorativa"
+                    src="/css.png"
+                    alt="CSS3"
                     fill
                     quality={100}
                     className="object-cover hover:scale-110 duration-300"
                     priority
                   />
                 </div>
-
-                <div className="absolute w-40 h-40 right-4 -bottom-8 border-4 overflow-hidden rounded-lg border-white shadow-md">
-                  <Image
-                    src="/front.jpg" 
-                    alt="Imagem adicional"
-                    fill
-                    quality={100}
-                    priority
-                  />
-                </div>
               </div>
 
-              {/* Texto */}
+              {/* Texto explicativo */}
               <div className="space-y-6 mt-5 text-pink-900" data-aos="fade-up-left" data-aos-delay="300">
-                <h2 className="text-3xl font-bold">O Lado Front-end</h2>
-                <p className="text-xl">
-                  O Front-end é tudo o que vemos e com o que interagimos em um site. É a fachada, o design, as cores e os botões que clicamos.
-                  Ele é responsável por transformar ideias em experiências visuais e funcionais.
-                </p>
-                <p className="text-xl">
-                  Tecnologias como HTML, CSS, JavaScript e frameworks como React são essenciais para criar interfaces modernas, responsivas e acessíveis.
-                  O front-end é onde a criatividade encontra a lógica.
-                </p>
+                <h2 className="text-3xl font-bold">CSS</h2>
+                <ul className="list-disc list-inside text-xl space-y-2">
+                  <li>Conceitos básicos</li>
+                  <p>O que é CSS e como ele funciona junto com o HTML.Sintaxe (seletor, propriedade e valor).Formas de aplicar CSS: inline, interno e externo.</p>
+                  <li>Seletores e combinações</li>
+                  <li>Cores e fundos</li>
+                  <li>Texto e fontes</li>
+                  <li>Box Model</li>
+                  <li>Posicionamento e Layout</li>
+                  <li>Estilização de elementos</li>
+                  <li>Boas práticas</li>
+                </ul>
               </div>
             </div>
 
@@ -87,6 +80,5 @@ export default function Front() {
         </section>
       </div>
     </>
-  );
+     );
 }
-  

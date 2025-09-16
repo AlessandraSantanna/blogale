@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Pacifico,Roboto } from "next/font/google";
 import "./globals.css";
-import { Pacifico } from "next/font/google";
-
+import Link from "next/link";
+import { Github, Linkedin } from "lucide-react";
+import AOSInitializer from "./components/AOSInitializer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -12,10 +13,16 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 const pacifico = Pacifico({
   subsets: ["latin"],
   weight: "400",
 });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
 
 export const metadata: Metadata = {
   title: "Blog Ale",
@@ -30,9 +37,40 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.className} antialiased`}
+        className={`flex flex-col min-h-screen ${geistSans.variable} ${geistMono.variable} ${pacifico.className} antialiased`}
       >
-        {children}
+        <main className="flex-grow">{children}</main>
+  
+        {/* Rodapé estilizado */}
+        <footer className={`bg-pink-800 text-white py-6 shadow z-50 ${roboto.className}`}>
+          <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-center md:text-left">
+              © 2025 Blog Ale. Todos os direitos reservados.
+            </p>
+
+           
+            <div className="flex gap-4">
+              <Link
+                href="https://github.com/AlessandraSantanna"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-200 transition"
+              >
+                <Github size={20} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/devalessandrasantana/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-200 transition"
+              >
+                <Linkedin size={20} />
+              
+                
+              </Link>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );

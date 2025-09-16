@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import {useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CardType } from "@/data/cards";
@@ -8,11 +8,20 @@ import { CardType } from "@/data/cards";
 export default function Card({ id, title, description, image }: CardType) {
   const [likes, setLikes] = useState(0);
 
-  const handleLike = () => {
-    setLikes((prev) => prev + 1);
-  };
+  useEffect(() => {
+    const savedLikes = localStorage.getItem(`likes-${id}`);
+    if (savedLikes) {
+      setLikes(parseInt(savedLikes));
+    }
+  }, [id]);
 
+  const handleLike = () => {
+    const newLikes = likes + 1;
+    setLikes(newLikes);
+    localStorage.setItem(`likes-${id}`, newLikes.toString());
+  };
   return (
+    <div className="card" data-aos="fade-up">
     <div className="bg-pink-100 rounded-lg shadow-md overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
       <Image
         src={image}
@@ -43,5 +52,6 @@ export default function Card({ id, title, description, image }: CardType) {
         </Link>
       </div>
     </div>
+    </div> 
   );
 }
