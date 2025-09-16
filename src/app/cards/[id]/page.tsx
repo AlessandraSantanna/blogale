@@ -1,4 +1,19 @@
 import { cardsData, CardType } from "@/data/cards";
+import Html5 from "../html5/page";
+import ReactPage from "../react/page";
+import TailwindPage from "../tailwindcss/page";
+import CssPage from "../Css/page";
+import TypeScriptPage from "../TypeScript/page";
+import NextjsPage from "../nextjs/page";
+
+const cardComponents: Record<string, React.FC> = {
+  html5: Html5,
+  react: ReactPage,
+  tailwindcss: TailwindPage,
+  Css: CssPage,
+  TypeScript: TypeScriptPage,
+  nextjs: NextjsPage,
+};
 
 type Props = {
   params: {
@@ -13,25 +28,15 @@ export function generateStaticParams() {
 }
 
 export default function CardPage({ params }: Props) {
-  const card = cardsData.find((c) => c.id === params.id);
+  const Component = cardComponents[params.id];
 
-  if (!card) {
+  if (!Component) {
     return <div className="p-8 text-red-600">Card não encontrado.</div>;
   }
 
   return (
     <div className="min-h-screen bg-white p-8">
-      <div className="max-w-3xl mx-auto bg-pink-50 rounded-lg shadow-md p-6">
-        <img
-          src={card.image}
-          alt={card.title}
-          className="w-full h-64 object-cover rounded"
-        />
-        <h1 className="text-4xl font-bold text-pink-800 mt-4">{card.title}</h1>
-        <p className="mt-4 text-pink-700 text-lg">{card.content}</p>
-
-       
-      </div>
+      <Component />
     </div>
   );
 }
