@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blogale 
 
-## Getting Started
+Bem-vindo ao **Blogale **, um blog pessoal hospedado em Vercel no endereço: [blogale-three.vercel.app](https://blogale-three.vercel.app)
 
-First, run the development server:
+## Descrição
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O Blogale  é um site de blog moderno e leve, criado para compartilhar ideias, artigos e experiências. Foi desenvolvido pensando em performance, simplicidade e boa experiência de leitura.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Principais objetivos do projeto:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Publicação de posts em formato de blog;
+- Layout responsivo para desktop e mobile;
+- Fácil manutenção e atualização de conteúdo;
+- Hospedagem via Vercel para deploy contínuo e rápido.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tecnologias Utilizadas
 
-## Learn More
+- **Next.js** — framework React para renderização e roteamento.  
+- **React** — biblioteca principal para construção de componentes.  
+- **Markdown** — para escrita dos posts (se esse for o caso; adaptar conforme).  
+- **Vercel** — para host do site e deploy automático.  
+- (Outros que você usar: CSS, Tailwind, Styled-Components, etc.)
 
-To learn more about Next.js, take a look at the following resources:
+## Demonstração
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Aqui está como o site se apresenta:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Página inicial com listagem dos posts;  
+- Página individual para cada post;  
+- Área de sobre / contato (se houver);  
+- (Outros recursos, caso existam: busca, categorias, comentários etc.)
 
-## Deploy on Vercel
+## Como executar localmente
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Siga estes passos para rodar o blog na sua máquina:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/blogale-three.git
+   cd blogale-three
