@@ -1,6 +1,6 @@
 # Blogale 
 
-Bem-vindo ao **Blogale **, um blog pessoal hospedado em Vercel no endereço: [blogale-three.vercel.app](https://blogale-three.vercel.app)
+Bem-vindo ao **Blogale**, um blog pessoal hospedado em Vercel no endereço: [blogale-three.vercel.app](https://blogale-three.vercel.app)
 
 ## Descrição
 
@@ -30,12 +30,6 @@ Aqui está como o site se apresenta:
 - Área de sobre / contato (se houver);  
 - (Outros recursos, caso existam: busca, categorias, comentários etc.)
 
-## Como executar localmente
 
-Siga estes passos para rodar o blog na sua máquina:
 
-1. Clone o repositório:
 
-   ```bash
-   git clone https://github.com/seu-usuario/blogale-three.git
-   cd blogale-three
