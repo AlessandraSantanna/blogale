@@ -17,7 +17,6 @@ Principais objetivos do projeto:
 
 - **Next.js** — framework React para renderização e roteamento.  
 - **React** — biblioteca principal para construção de componentes.  
-- **Markdown** — para escrita dos posts (se esse for o caso; adaptar conforme).  
 - **Vercel** — para host do site e deploy automático.  
 - (Outros que você usar: CSS, Tailwind, Styled-Components, etc.)
 
